@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="en" class="h-100">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="author" content="Adrian Gould">
+    <meta name="generator" content="Jekyll v4.1.1">
+    <title>System Load Quick Monitor</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="/static/css/bootstrap.min.css"
+          rel="stylesheet"
+          crossorigin="anonymous">
+
+
+    <!-- Custom styles for this templates -->
+    <link href="/static/css/app.css" rel="stylesheet">
+</head>
+<body class="d-flex flex-column h-100">
+<header>
+    <!-- Fixed navbar -->
+    <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+        <a class="navbar-brand" href="#">Data Server</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse"
+                data-target="#navbarCollapse" aria-controls="navbarCollapse"
+                aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Link</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link disabled" href="#" tabindex="-1"
+                       aria-disabled="true">Disabled</a>
+                </li>
+            </ul>
+
+        </div>
+    </nav>
+</header>
+
+<!-- Begin page content -->
+<main role="main" class="flex-shrink-0">
+    <div class="container">
+        <h1 class="mt-5">System Load Quick Monitor</h1>
+        <p class="lead">This is a demonstration site showing the last 10
+            items of data only.</p>
+        {% for load in loads %}
+            <p>The latest load at {{load[2]}} was {{load[1]}}%.</p>
+        {% else %}
+            <p>No data available.</p>
+        {% endfor %}
+    </div>
+</main>
+
+<footer class="footer mt-auto py-3">
+    <div class="container">
+        <div class="row small">
+            <div class="col">
+                <p>
+                    Page by <i>Adrian Gould</i>.
+                </p>
+                <p>
+                    Updated by <i>Sander Huijsen</i>.
+                </p>
+            </div>
+            <div class="col">
+                <p>
+                    &copy; Copyright 2020, Adrian Gould & Sander Huijsen.
+                </p>
+                <p>
+                    This page uses: Bootstrap, jQuery, Popper.js, Python,
+                    and HTML5.
+                </p>
+            </div>
+        </div>
+    </div>
+</footer>
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+<script>window.jQuery || document.write('<script src="/docs/4.5/assets/js/vendor/jquery.slim.min.js"><\/script>')</script>
+<script src="/docs/4.5/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-LtrjvnR4Twt/qOuYxE721u19sVFLVSA4hf/rRt6PrZTmiPltdZcI7q7PXQBYTKyf"
+        crossorigin="anonymous"></script>
+</body>
+</html>
+

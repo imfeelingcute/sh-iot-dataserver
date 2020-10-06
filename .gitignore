@@ -1,0 +1,14 @@
+# Jetbrains
+.idea
+
+# Virtual environment
+.venv
+
+# Cached Python
+__pycache__
+
+# Compiled Python Files
+*.pyc
+
+# Sqlite3 files
+*.db

@@ -1,0 +1,143 @@
+<!doctype html>
+<html lang="en" class="h-100">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="author" content="Adrian Gould">
+    <meta name="generator" content="Jekyll v4.1.1">
+    <title>{% block title %}{% endblock %}</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="/static/css/bootstrap.min.css"
+          rel="stylesheet"
+          crossorigin="anonymous">
+
+
+    <!-- Custom styles for this template -->
+    <link href="/static/css/app.css" rel="stylesheet">
+</head>
+<body class="d-flex flex-column h-100">
+<header>
+    <!-- Fixed navbar -->
+    <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+        <a class="navbar-brand" href="#">Data Server</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse"
+                data-target="#navbarCollapse" aria-controls="navbarCollapse"
+                aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#"
+                       id="navbarDropdown" role="button" data-toggle="dropdown"
+                       aria-haspopup="true" aria-expanded="false">
+                        CPU Load (Manual)
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="/cpu-load">
+                            Last 10
+                        </a>
+                        <a class="dropdown-item" href="/cpu-load/last/6">
+                            Last 6
+                        </a>
+                        <a class="dropdown-item" href="/cpu-load/last/100">
+                            Last 100
+                        </a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item"
+                           href="/cpu-load/in-last/5/minutes">
+                            Last 5 Minutes
+                        </a>
+                        <a class="dropdown-item"
+                           href="/cpu-load/in-last/1/hours">
+                            Last 1 Hour
+                        </a>
+                    </div>
+                </li>
+
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#"
+                       id="navbarDropdown" role="button" data-toggle="dropdown"
+                       aria-haspopup="true" aria-expanded="false">
+                        CPU Load (Auto)
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="#">Last 10</a>
+                        <a class="dropdown-item" href="#">Last 100</a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="#">Last 5 Minutes</a>
+                    </div>
+                </li>
+
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#"
+                       id="navbarDropdown" role="button" data-toggle="dropdown"
+                       aria-haspopup="true" aria-expanded="false">
+                        CPU Load (Graph)
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="#">Last 10</a>
+                        <a class="dropdown-item" href="#">Last 100</a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="#">Last 5 Minutes</a>
+                    </div>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link disabled" href="#" tabindex="-1"
+                       aria-disabled="true">Disabled</a>
+                </li>
+            </ul>
+
+        </div>
+    </nav>
+</header>
+
+<!-- Begin page content -->
+<main role="main" class="flex-shrink-0">
+    <div class="container">
+        {% block content %}{% endblock %}
+    </div>
+</main>
+
+<footer class="footer mt-auto py-3">
+    <div class="container">
+        <div class="row small">
+            <div class="col">
+                <p>
+                    Page by <i>Adrian Gould</i>.
+                </p>
+                <p>
+                    Updated by <i>Sander Huijsen</i>.
+                </p>
+            </div>
+            <div class="col">
+                <p>
+                    &copy; Copyright 2020, Adrian Gould & Sander Huijsen.
+                </p>
+                <p>
+                    This page uses: Bootstrap, jQuery, Popper.js, Python,
+                    and HTML5.
+                </p>
+            </div>
+        </div>
+    </div>
+</footer>
+<script src="https://code.jquery.com/jquery-3.5.1.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+<script>
+    window.jQuery || document.write('<script src="/static/js/jquery-3.5.1.min.js"><\/script>')
+</script>
+<script src="/static/js/bootstrap.bundle.min.js"
+        integrity="sha384-LtrjvnR4Twt/qOuYxE721u19sVFLVSA4hf/rRt6PrZTmiPltdZcI7q7PXQBYTKyf"
+        crossorigin="anonymous"></script>
+{% block pagescripts %}{% endblock %}
+</body>
+</html>
+

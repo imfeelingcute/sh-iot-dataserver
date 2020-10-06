@@ -1,0 +1,42 @@
+{% extends "base.html" %}
+
+{% block title %}
+    Quick CPU Load Monitor
+{% endblock %}
+
+{% block content %}
+    <h1 class="mt-5">Quick System Load Monitor</h1>
+
+    <!-- if no results -->
+    {% if length == 0 %}
+        <h3 class="alert alert-warning">
+            No Data. Check monitor running.
+        </h3>
+    {% else %}
+        <!-- else show data in table -->
+        <table class="table">
+            <thead>
+            <tr>
+                <th>ID</th>
+                <th>Date/Time</th>
+                <th>Reading</th>
+            </tr>
+            </thead>
+            <tbody>
+            <!-- for each row in history -->
+            {% for count in range(0,length) %}
+                <tr>
+                    <td>{{ history[count]["id"] }}</td>
+                    <td>{{ history[count]["created_at"] }}</td>
+                    <td>{{ history[count]["load"] }}</td>
+                </tr>
+            {% endfor %}
+            <!-- end foreach -->
+            </tbody>
+        </table>
+    {% endif %}
+    <!-- end if -->
+{% endblock %}
+
+{% block pagescripts %}
+{% endblock %}

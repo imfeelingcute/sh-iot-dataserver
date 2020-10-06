@@ -1,0 +1,33 @@
+{% extends "base.html" %}
+
+{% block title %}
+    Quick CPU Load Monitor
+{% endblock %}
+
+{% block content %}
+    <h1 class="mt-5">Quick System Load Monitor</h1>
+    <p class="lead">
+        A demonstration of how to create a simple CPU monitor.
+    </p>
+    <h3>Manual Refresh</h3>
+    <ul>
+        <li>Table: last 10 readings (Default)</li>
+        <li>Table: last 5 minutes of readings</li>
+        <li>Table: last 100 readings</li>
+    </ul>
+    <h3>Auto-Refresh</h3>
+    <ul>
+        <li>Table: last 10 readings (Default)</li>
+        <li>Table: last 5 minutes of readings</li>
+        <li>Table: last 100 readings</li>
+    </ul>
+    <h3>Auto-Refreshing Graph</h3>
+    <ul>
+        <li>Last 10 readings (Default)</li>
+        <li>Last 20 minutes of readings</li>
+        <li>Last 100 readings</li>
+    </ul>
+{% endblock %}
+
+{% block pagescripts %}
+{% endblock %}
